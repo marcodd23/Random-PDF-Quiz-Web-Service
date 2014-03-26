@@ -103,6 +103,12 @@ public class XMLQuizClient {
 
     }
 
+    /**
+     * Prende in input una stringa e con questa prova a costruire un oggetto
+     * URL, se riesce a costruirlo ritorna un Object istanza di un InputStream,
+     * altrimenti si avrà una MalformedURLException e il metodo tornera in
+     * output un Object che è la stessa stringa che ha avuto in input
+     */
     private static Object getFromUrl(String url) {
         try {
             URL xmlUrl = new URL(url);
