@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+    name="XMLQuizService"
+    targetNamespace="http://it.univaq.mwt.soa/XMLQuizService"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:tns="http://it.univaq.mwt.soa/XMLQuizService"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd1="http://it.univaq.mwt.soa/XMLQuizService.xsd1">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Created using Cape Clear Studio SOA Editor - http://www.capeclear.com</wsdl:documentation>
+    <wsdl:types>
+        <xsd:schema
+            targetNamespace="http://it.univaq.mwt.soa/XMLQuizService.xsd1"
+            xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:xsd1="http://it.univaq.mwt.soa/XMLQuizService.xsd1">
+            <xsd:simpleType name="SectorID">
+                <xsd:restriction base="xsd:string">
+                    <xsd:pattern value="[A-Z0-9\s]{3,}"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="StudentID">
+                <xsd:restriction base="xsd:string">
+                    <xsd:pattern value="[1-9]{6,10}"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:element name="FaultElement" type="xsd1:FaultType"/>
+            <xsd:simpleType name="XmlText">
+                <xsd:restriction base="xsd:string"/>
+            </xsd:simpleType>
+            <xsd:complexType name="QuestionXmlTextOrUri">
+                <xsd:choice>
+                    <xsd:element
+                        maxOccurs="1"
+                        minOccurs="0"
+                        name="QuestionXmlText"
+                        type="xsd1:XmlText"/>
+                    <xsd:element
+                        maxOccurs="1"
+                        minOccurs="0"
+                        name="QuestionXmlUri"
+                        type="xsd1:XmlUri"/>
+                </xsd:choice>
+            </xsd:complexType>
+            <xsd:simpleType name="XmlUri">
+                <xsd:restriction base="xsd:string"/>
+            </xsd:simpleType>
+            <xsd:simpleType name="DifficultLevel">
+                <xsd:restriction base="xsd:integer">
+                    <xsd:maxInclusive fixed="true" value="5"/>
+                    <xsd:minInclusive fixed="true" value="1"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:complexType name="QuizBuilderList">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="1" minOccurs="1" name="sector" type="xsd1:SectorID"/>
+                    <xsd:element
+                        maxOccurs="1"
+                        minOccurs="1"
+                        name="level"
+                        type="xsd1:DifficultLevel"/>
+                    <xsd:element
+                        maxOccurs="1"
+                        minOccurs="1"
+                        name="questionsNumber"
+                        type="xsd1:NumberOfQuestions"/>
+                    <xsd:element maxOccurs="1" minOccurs="0" name="studentName" type="xsd:string"/>
+                    <xsd:element
+                        maxOccurs="1"
+                        minOccurs="0"
+                        name="studentSurname"
+                        type="xsd:string"/>
+                    <xsd:element
+                        maxOccurs="1"
+                        minOccurs="0"
+                        name="studentIDNumber"
+                        type="xsd1:StudentID"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:simpleType name="NumberOfQuestions">
+                <xsd:restriction base="xsd:int">
+                    <xsd:minInclusive fixed="true" value="1"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:complexType name="FaultType">
+                <xsd:sequence>
+                    <xsd:element
+                        maxOccurs="unbounded"
+                        minOccurs="1"
+                        name="faultDescription"
+                        type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="createQuizIN">
+        <wsdl:part name="quizDefinition" type="xsd1:QuizBuilderList"/>
+    </wsdl:message>
+    <wsdl:message name="createQuizOUT">
+        <wsdl:part name="quizGenerated" type="xsd1:XmlText"/>
+    </wsdl:message>
+    <wsdl:message name="formatQuizIN">
+        <wsdl:part name="quizInput" type="xsd1:XmlText"/>
+    </wsdl:message>
+    <wsdl:message name="formatQuizOUT">
+        <wsdl:part name="pdf" type="xsd:base64Binary"/>
+    </wsdl:message>
+    <wsdl:message name="storeQuestionIN">
+        <wsdl:part name="xmlQuestion" type="xsd1:QuestionXmlTextOrUri"/>
+    </wsdl:message>
+    <wsdl:message name="storeQuestionOUT">
+        <wsdl:part name="storedSuccess" type="xsd:boolean"/>
+    </wsdl:message>
+    <wsdl:message name="faultMessage">
+        <wsdl:part element="xsd1:FaultElement" name="errorDetail"/>
+    </wsdl:message>
+    <wsdl:portType name="XMLQuiz">
+        <wsdl:operation name="storeQuestion">
+            <wsdl:input message="tns:storeQuestionIN"/>
+            <wsdl:output message="tns:storeQuestionOUT"/>
+            <wsdl:fault message="tns:faultMessage" name="serviceFault"/>
+        </wsdl:operation>
+        <wsdl:operation name="createQuiz">
+            <wsdl:input message="tns:createQuizIN"/>
+            <wsdl:output message="tns:createQuizOUT"/>
+            <wsdl:fault message="tns:faultMessage" name="serviceFault"/>
+        </wsdl:operation>
+        <wsdl:operation name="formatQuiz">
+            <wsdl:input message="tns:formatQuizIN"/>
+            <wsdl:output message="tns:formatQuizOUT"/>
+            <wsdl:fault message="tns:faultMessage" name="serviceFault"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="XMLQuizSOAP" type="tns:XMLQuiz">
+        <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Interfaccia di XMLQuiz con SOAP</wsdl:documentation>
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="storeQuestion">
+            <soap:operation soapAction="XMLQuiz#storeQuestion"/>
+            <wsdl:input>
+                <soap:body namespace="http://it.univaq.mwt.soa/XMLQuiz/soap" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body namespace="http://it.univaq.mwt.soa/XMLQuiz/soap" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="serviceFault">
+                <soap:fault name="serviceFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createQuiz">
+            <soap:operation soapAction="XMLQuiz#createQuiz"/>
+            <wsdl:input>
+                <soap:body namespace="http://it.univaq.mwt.soa/XMLQuiz/soap" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body namespace="http://it.univaq.mwt.soa/XMLQuiz/soap" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="serviceFault">
+                <soap:fault name="serviceFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="formatQuiz">
+            <soap:operation soapAction="XMLQuiz#formatQuiz"/>
+            <wsdl:input>
+                <soap:body namespace="http://it.univaq.mwt.soa/XMLQuiz/soap" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body namespace="http://it.univaq.mwt.soa/XMLQuiz/soap" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="serviceFault">
+                <soap:fault name="serviceFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="XMLQuizService">
+        <wsdl:port binding="tns:XMLQuizSOAP" name="XMLQuizSOAPPort">
+            <soap:address location="http://localhost:8000/ccx/XMLQuizService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

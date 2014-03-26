@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified"
+           targetNamespace="http://it.univaq.mwt.xml/quiz" 
+           xmlns="http://it.univaq.mwt.xml/quiz">
+
+  
+    <!-- TIPI SEMPLICI -->  
+ 
+    <xs:simpleType name="sectorIdType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z0-9\s]{3,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="serialNumberType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[T]-[A-Z\d]{7}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="levelType">
+        <xs:restriction base="xs:unsignedByte">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="5"/>
+        </xs:restriction>
+    </xs:simpleType> 
+
+
+   
+    <!-- TIPI COMPLESSI -->
+    <xs:complexType name="optionType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="trueAnswer" type="xs:boolean" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+  
+    <xs:complexType name="optionsListType">
+        <xs:sequence>
+            <xs:element name="option" type="optionType" maxOccurs="3"/>
+        </xs:sequence>
+    </xs:complexType>
+      
+       
+    <xs:complexType name="questionType">
+        <xs:sequence>
+            <xs:element ref="image" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="text"/> 
+            <xs:element ref="optionsList"/> 
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="studentType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="surname" type="xs:string"/>
+            <xs:element name="idNumber">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:totalDigits value="6"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType> 
+    <xs:complexType name="questionsListType">
+        <xs:sequence>
+            <xs:element ref="question" minOccurs="1" maxOccurs="unbounded"/> 
+        </xs:sequence>
+    </xs:complexType> 
+    <xs:complexType name="quizType">
+        <xs:sequence>
+            <xs:element ref="serialNumber"/>
+            <xs:element ref="timestamp"/>
+            <xs:element ref="didacticSector"/>
+            <xs:element ref="level"/>
+            <xs:element ref="student"/>
+            <xs:element ref="questionsList"/>
+        </xs:sequence>
+    </xs:complexType>
+ 
+    
+    <!-- DICHIARAZIONE ELEMENTI SEMPLICI --> 
+    <xs:element name="text" type="xs:string"/>
+    <xs:element name="option" type="xs:string"/>   
+  
+    
+    <!-- ELEMENTI CON TIPO COMPLESSO --> 
+    <xs:element name="serialNumber" type="serialNumberType"/>
+    <xs:element name="timestamp" type="xs:date"/>
+    <!--    <xs:element name="didacticSector" type="sectorType"/>-->
+    <xs:element name="didacticSector">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="sectorId" type="sectorIdType" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="level" type="levelType"/>
+    <xs:element name="student" type="studentType"/>
+    <xs:element name="image">   
+        <xs:complexType>
+            <xs:attribute name="href" type="xs:anyURI" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="optionsList" type="optionsListType"/>     
+    <xs:element name="questionsList" type="questionsListType"/>
+    <xs:element name="question" type="questionType"/>
+    <xs:element name="quiz" type="quizType"/>
+    
+</xs:schema>

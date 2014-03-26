@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><questionsGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://it.univaq.mwt.xml/questionGroup ../schema/questionGroupSchema.xsd">
+    <didacticSector>
+        <sectorId>SOA</sectorId>
+        <description>Service Oriented Architectures</description>
+    </didacticSector>
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"/>
+        <questionText>
+            Qual è l'ordine corretto delle "&gt;" e "=" operatori, quando vogliamo specificare maggiore o uguale condizione di ricerca? 
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>maggiore uguale</rightAnswer>
+            <wrongAnswer>uguale maggiore</wrongAnswer>
+            <wrongAnswer>nessuna</wrongAnswer>
+        </AnswersList>
+    </question>
+
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"/>
+        <questionText>Qual è l'ordine corretto delle "&gt;" e "=" operatori, quando vogliamo specificare maggiore o uguale condizione di ricerca? </questionText>
+        <AnswersList>
+            <wrongAnswer>uguale maggiore</wrongAnswer>
+            <wrongAnswer>nessuna</wrongAnswer>
+            <rightAnswer>maggiore uguale</rightAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"/>
+        <questionText>Qual è l'ordine corretto delle "&gt;" e "=" operatori, quando vogliamo specificare maggiore o uguale condizione di ricerca? </questionText>
+        <AnswersList>
+            <rightAnswer>maggiore uguale</rightAnswer>
+            <wrongAnswer>uguale maggiore</wrongAnswer>
+            <wrongAnswer>nessuna</wrongAnswer>
+        </AnswersList>
+    </question>
+</questionsGroup>

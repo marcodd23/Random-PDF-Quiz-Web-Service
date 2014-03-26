@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/home/marco/Dropbox/PROGETTO%20XML-SOA/Tracce%20Progetti/soa/XMLQuizService.wsdl" uri="src/conf/xml-resources/web-services/WSDL_Adapter/wsdl/XMLQuizService.wsdl"/>
+</catalog>

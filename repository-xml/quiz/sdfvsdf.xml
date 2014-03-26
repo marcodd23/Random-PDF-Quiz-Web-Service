@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><quiz xmlns="http://it.univaq.mwt.xml/quiz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://it.univaq.mwt.xml/quiz ../schema/quizSchema.xsd">
+   <serialNumber>T-6A889F8</serialNumber>
+   <timestamp>2014-03-16</timestamp>
+   <didacticSector>
+      <sectorId>J2EE</sectorId>
+      <description>Tecnologie J2EE</description>
+   </didacticSector>
+   <level>3</level>
+   <student>
+      <name>asdfas</name>
+      <surname>afsdfa</surname>
+      <idNumber>333333</idNumber>
+   </student>
+   <questionsList>
+      <question>
+         <image href="http://univaq.it/image.jpg"/>
+         <text>
+            Quesito 3
+        </text>
+         <optionsList>
+            <rightAnswer>TRUE</rightAnswer>
+            <option>FALSE4</option>
+            <option>FALSE6</option>
+         </optionsList>
+      </question>
+      <question>
+         <image href="http://univaq.it/image.jpg"/>
+         <text>
+            Quesito 4
+        </text>
+         <optionsList>
+            <option>FALSE4</option>
+            <rightAnswer>TRUE</rightAnswer>
+            <option>FALSE2</option>
+         </optionsList>
+      </question>
+      <question>
+         <image href="http://univaq.it/image.jpg"/>
+         <text>
+            Quesito 1
+        </text>
+         <optionsList>
+            <option>FALSE1</option>
+            <option>FALSE4</option>
+            <rightAnswer>TRUE</rightAnswer>
+         </optionsList>
+      </question>
+      <question>
+         <image href="http://univaq.it/image.jpg"/>
+         <text>
+            Quesito 7
+        </text>
+         <optionsList>
+            <option>FALSE6</option>
+            <rightAnswer>TRUE</rightAnswer>
+            <option>FALSE7</option>
+         </optionsList>
+      </question>
+      <question>
+         <image href="http://univaq.it/image.jpg"/>
+         <text>
+            Quesito 5
+        </text>
+         <optionsList>
+            <rightAnswer>TRUE</rightAnswer>
+            <option>FALSE7</option>
+            <option>FALSE6</option>
+         </optionsList>
+      </question>
+      <question>
+         <image href="http://univaq.it/image.jpg"/>
+         <text>
+            Quesito 6
+        </text>
+         <optionsList>
+            <option>FALSE9</option>
+            <rightAnswer>TRUE</rightAnswer>
+            <option>FALSE5</option>
+         </optionsList>
+      </question>
+   </questionsList>
+</quiz>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified"
+           targetNamespace="http://it.univaq.mwt.xml/questionGroup" 
+           xmlns="http://it.univaq.mwt.xml/questionGroup">
+    
+  
+    <!-- TIPI SEMPLICI -->  
+ 
+    <xs:simpleType name="sectorIdType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z0-9\s]{3,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="levelType">
+        <xs:restriction base="xs:unsignedByte">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="5"/>
+        </xs:restriction>
+    </xs:simpleType> 
+    
+    
+   
+    <!-- TIPI COMPLESSI -->
+    <xs:complexType name="AnswersListType">
+        <xs:sequence>
+            <xs:element name="rightAnswer" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="wrongAnswer" type="xs:string" minOccurs="2" maxOccurs="unbounded"/>
+        </xs:sequence>      
+    </xs:complexType>
+    <xs:complexType name="questionType">
+        <xs:sequence>
+            <xs:element ref="level"/>
+            <xs:element ref="image" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="questionText"/> 
+            <xs:element ref="AnswersList"/> 
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="questionsGroupType">
+        <xs:sequence>
+            <xs:element ref="didacticSector" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="question" minOccurs="1" maxOccurs="unbounded"/> 
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- DICHIARAZIONE ELEMENTI SEMPLICI --> 
+    <xs:element name="questionText" type="xs:string"/>
+    
+    <!-- ELEMENTI CON TIPO COMPLESSO --> 
+    <xs:element name="question" type="questionType"/>
+    <xs:element name="questionsGroup" type="questionsGroupType"/>
+<!--    <xs:element name="didacticSector" type="sectorType"/>-->
+    <xs:element name="didacticSector">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="sectorId" type="sectorIdType" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <xs:element name="level" type="levelType"/>
+    <xs:element name="image">   
+        <xs:complexType>
+            <xs:attribute name="href" type="xs:anyURI" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AnswersList" type="AnswersListType"/>       
+</xs:schema>

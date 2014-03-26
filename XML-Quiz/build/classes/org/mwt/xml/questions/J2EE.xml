@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questionsGroup xmlns="http://it.univaq.mwt.xml/questionGroup" 
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://it.univaq.mwt.xml/questionGroup ../schema/questionGroupSchema.xsd">
+    <didacticSector>
+        <sectorId>J2EE</sectorId>
+        <description>Tecnologie J2EE</description>
+    </didacticSector>
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Qual è l'ordine corretto delle ">" e "=" operatori, quando vogliamo specificare maggiore o uguale condizione di ricerca? 
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>maggiore uguale</rightAnswer>
+            <wrongAnswer>uguale maggiore</wrongAnswer>
+            <wrongAnswer>nessuna</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>3</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Quesito 1
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>3</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Quesito 2
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Che cosa significa SQL??
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE</wrongAnswer>
+            <wrongAnswer>FROM SQL parola chiave specifica una condizione di ricerca</wrongAnswer>
+            <wrongAnswer>FIND</wrongAnswer>
+            <wrongAnswer>SEARCH</wrongAnswer>
+            <wrongAnswer>Strict Query Language</wrongAnswer>
+            <wrongAnswer>Standard Query Language.</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>3</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Quesito 3
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+            <wrongAnswer>FALSE5</wrongAnswer>
+            <wrongAnswer>FALSE6</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>2</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Che cosa significa SQL??
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+            <wrongAnswer>FALSE5</wrongAnswer>
+            <wrongAnswer>FALSE6</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Che cosa significa SQL??
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+            <wrongAnswer>FALSE5</wrongAnswer>
+            <wrongAnswer>FALSE6</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>3</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Quesito 4
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+            <wrongAnswer>FALSE5</wrongAnswer>
+            <wrongAnswer>FALSE6</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Che cosa significa SQL??
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+            <wrongAnswer>FALSE5</wrongAnswer>
+            <wrongAnswer>FALSE6</wrongAnswer>
+        </AnswersList>
+    </question>    
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Che cosa significa SQL??
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>Strong Query Language</rightAnswer>
+            <wrongAnswer>Structured Query Language.</wrongAnswer>
+            <wrongAnswer>FROM SQL parola chiave specifica una condizione di ricerca</wrongAnswer>
+            <wrongAnswer>FIND</wrongAnswer>
+            <wrongAnswer>SEARCH</wrongAnswer>
+            <wrongAnswer>Strict Query Language</wrongAnswer>
+            <wrongAnswer>Standard Query Language.</wrongAnswer>
+        </AnswersList>
+    </question>    
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Che cosa significa SQL??
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>Strong Query Language</rightAnswer>
+            <wrongAnswer>Structured Query Language.</wrongAnswer>
+            <wrongAnswer>FROM SQL parola chiave specifica una condizione di ricerca</wrongAnswer>
+            <wrongAnswer>FIND</wrongAnswer>
+            <wrongAnswer>SEARCH</wrongAnswer>
+            <wrongAnswer>Strict Query Language</wrongAnswer>
+            <wrongAnswer>Standard Query Language.</wrongAnswer>
+        </AnswersList>
+    </question>    
+    <question>
+        <level>3</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Quesito 5
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+            <wrongAnswer>FALSE5</wrongAnswer>
+            <wrongAnswer>FALSE6</wrongAnswer>
+            <wrongAnswer>FALSE7</wrongAnswer>
+            <wrongAnswer>FALSE8</wrongAnswer>
+            <wrongAnswer>FALSE9</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Che cosa significa SQL??
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>Strong Query Language</rightAnswer>
+            <wrongAnswer>Structured Query Language.</wrongAnswer>
+            <wrongAnswer>FROM SQL parola chiave specifica una condizione di ricerca</wrongAnswer>
+            <wrongAnswer>FIND</wrongAnswer>
+            <wrongAnswer>SEARCH</wrongAnswer>
+            <wrongAnswer>Strict Query Language</wrongAnswer>
+            <wrongAnswer>Standard Query Language.</wrongAnswer>
+        </AnswersList>
+    </question>    
+    <question>
+        <level>3</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Quesito 6
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+            <wrongAnswer>FALSE5</wrongAnswer>
+            <wrongAnswer>FALSE6</wrongAnswer>
+            <wrongAnswer>FALSE7</wrongAnswer>
+            <wrongAnswer>FALSE8</wrongAnswer>
+            <wrongAnswer>FALSE9</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Che cosa significa SQL??
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>Strong Query Language</rightAnswer>
+            <wrongAnswer>Structured Query Language.</wrongAnswer>
+            <wrongAnswer>FROM SQL parola chiave specifica una condizione di ricerca</wrongAnswer>
+            <wrongAnswer>FIND</wrongAnswer>
+            <wrongAnswer>SEARCH</wrongAnswer>
+            <wrongAnswer>Strict Query Language</wrongAnswer>
+            <wrongAnswer>Standard Query Language.</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>3</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Quesito 7
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+            <wrongAnswer>FALSE5</wrongAnswer>
+            <wrongAnswer>FALSE6</wrongAnswer>
+            <wrongAnswer>FALSE7</wrongAnswer>
+            <wrongAnswer>FALSE8</wrongAnswer>
+            <wrongAnswer>FALSE9</wrongAnswer>
+        </AnswersList>
+    </question>
+    <question>
+        <level>1</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Che cosa significa SQL??
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>Strong Query Language</rightAnswer>
+            <wrongAnswer>Structured Query Language.</wrongAnswer>
+            <wrongAnswer>FROM SQL parola chiave specifica una condizione di ricerca</wrongAnswer>
+            <wrongAnswer>FIND</wrongAnswer>
+            <wrongAnswer>SEARCH</wrongAnswer>
+            <wrongAnswer>Strict Query Language</wrongAnswer>
+            <wrongAnswer>Standard Query Language.</wrongAnswer>
+        </AnswersList>
+    </question>    
+    <question>
+        <level>3</level>
+        <image href="http://univaq.it/image.jpg"></image>
+        <questionText>
+            Quesito 8
+        </questionText>  
+        <AnswersList>
+            <rightAnswer>TRUE</rightAnswer>
+            <wrongAnswer>FALSE1</wrongAnswer>
+            <wrongAnswer>FALSE2</wrongAnswer>
+            <wrongAnswer>FALSE3</wrongAnswer>
+            <wrongAnswer>FALSE4</wrongAnswer>
+            <wrongAnswer>FALSE5</wrongAnswer>
+            <wrongAnswer>FALSE6</wrongAnswer>
+            <wrongAnswer>FALSE7</wrongAnswer>
+            <wrongAnswer>FALSE8</wrongAnswer>
+            <wrongAnswer>FALSE9</wrongAnswer>
+        </AnswersList>
+    </question>
+</questionsGroup>
