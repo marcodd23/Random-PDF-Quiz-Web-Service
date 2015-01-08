@@ -5,4 +5,4 @@ A Java application that randomly generate School Test of N Quiz Questions in XML
 
 ##How To:
 
-To try the application, change the absolute path in the file **XML-Quiz/src/xmlQuiz.properties**  
+The application is built without Maven, so the best way is to open it with Netbeans, and change the absolute path in the file **XML-Quiz/src/xmlQuiz.properties**  
